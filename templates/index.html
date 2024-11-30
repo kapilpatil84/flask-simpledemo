@@ -1,0 +1,26 @@
+<head>
+    <title>Index Page</title>
+</head>
+<body>
+<h1>Login Form</h1>
+<form method="post" action="/login">
+    <table border="1">
+        <tr>
+            <td>Username:</td>
+            <td><input type="text" name="username" value="{% if username %}{{ username }}{% endif %}"></td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td><input type="password" name="password"></td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td><input type="submit"></td>
+        </tr>
+    </table>
+</form>
+
+{% if username %}
+    <h1>Hello {{ username }}</h1>
+{% endif %}
+</body>
